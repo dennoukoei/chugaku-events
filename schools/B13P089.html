@@ -1,0 +1,3620 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>東京女学館中学校 | イベント詳細</title>
+  <style>
+    :root { --bg:#f5f7f3; --surface:#fff; --surface-2:#fafbf7; --ink:#14191c; --muted:#50595d; --line:#ccd5d1; --line-soft:#e3e9e6; --accent:#1e655c; --accent2:#8a3434; --soft:#e3edea; --shadow:0 14px 32px rgba(20,30,35,.10); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif; font-size:16px; line-height:1.7; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    header { background:#173b3b; color:#fff; border-bottom:5px solid #c28a35; }
+    .topbar, main, footer { max-width:1180px; margin:0 auto; padding:32px 24px; }
+    main { padding-top:32px; }
+    .back { color:#d7ece7; font-size:14px; font-weight:700; }
+    .back:hover { color:#fff; }
+    h1 { margin:12px 0 0; font-size:clamp(28px,4.4vw,44px); line-height:1.2; letter-spacing:0; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .pill { display:inline-flex; min-height:34px; align-items:center; padding:6px 14px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.10); color:#f1faf7; font-size:14px; font-weight:600; }
+    .panel { padding:20px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .panel p { margin:8px 0; color:var(--muted); font-size:15px; }
+    .profile-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:18px; }
+    .info-card { min-height:84px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface-2); }
+    .info-card span { display:block; margin-bottom:6px; color:var(--muted); font-size:13px; font-weight:800; letter-spacing:0.02em; }
+    .info-card strong { display:block; font-size:16px; line-height:1.5; font-weight:700; }
+    .deviation-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:18px; }
+    .deviation-card { min-height:96px; padding:16px; border:1px solid #b8cdc6; border-radius:10px; background:#eff7f3; }
+    .deviation-card span { display:block; margin-bottom:6px; color:#3f4a4d; font-size:13px; font-weight:800; letter-spacing:0.02em; }
+    .deviation-card strong { display:block; font-size:24px; line-height:1.2; color:var(--accent); font-weight:800; }
+    .deviation-card a { display:inline-flex; margin-top:6px; font-size:13px; font-weight:800; }
+    .detail-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; }
+    .data-panel { padding:20px; border:1px solid var(--line); border-radius:10px; background:#fff; }
+    .data-panel h2 { margin:0 0 14px; font-size:20px; font-weight:800; }
+    .data-panel ul, .info-section ul { margin:0; padding-left:20px; }
+    .data-panel li, .info-section li { margin:8px 0; color:#2a3236; font-size:14px; line-height:1.65; }
+    .info-section { margin:14px 0; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; }
+    .info-section summary { cursor:pointer; padding:16px 20px; color:var(--ink); font-size:17px; font-weight:800; background:var(--surface-2); }
+    .info-section summary:hover { background:#f1f4ee; }
+    .info-section[open] summary { border-bottom:1px solid var(--line); }
+    .info-section div { padding:18px 20px; }
+    .info-section p { margin:0; color:#2a3236; font-size:15px; line-height:1.75; }
+    .past-exam-section { margin:14px 0; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; }
+    .past-exam-section summary { cursor:pointer; display:flex; justify-content:space-between; gap:12px; padding:16px 20px; color:var(--ink); font-size:17px; font-weight:800; background:var(--surface-2); }
+    .past-exam-section summary:hover { background:#f1f4ee; }
+    .past-exam-section[open] summary { border-bottom:1px solid var(--line); }
+    .past-year { border-bottom:1px solid var(--line-soft); background:#fff; }
+    .past-year:last-child { border-bottom:0; }
+    .past-year summary { cursor:pointer; display:flex; justify-content:space-between; gap:12px; padding:13px 20px; color:var(--ink); font-size:15px; font-weight:800; background:#fdfdfc; }
+    .past-year summary:hover { background:var(--surface-2); }
+    .past-year[open] summary { border-bottom:1px solid var(--line-soft); }
+    .past-grid { display:grid; grid-template-columns:minmax(0,1.8fr) minmax(100px,0.6fr) minmax(100px,0.6fr); }
+    .past-head, .past-row > div { padding:12px 16px; border-bottom:1px solid var(--line-soft); }
+    .past-head { background:#e9f0ec; color:#3f4a4d; font-size:13px; font-weight:800; letter-spacing:0.02em; }
+    .past-row { display:contents; }
+    .past-subject { font-size:14px; font-weight:700; color:var(--ink); overflow-wrap:anywhere; }
+    .past-action { display:flex; align-items:center; }
+    .past-action a, .past-action .missing { display:inline-flex; min-height:32px; align-items:center; padding:5px 12px; border-radius:6px; font-size:13px; font-weight:800; text-decoration:none; }
+    .past-action a { border:1px solid #b8cdc6; background:#eff7f3; color:var(--accent); }
+    .past-action a:hover { background:var(--soft); }
+    .past-action .missing { color:var(--muted); }
+    .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    .btn, .links a, .actions a { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:8px 14px; border:1px solid var(--accent); border-radius:8px; background:#fff; color:var(--accent); font-size:14px; font-weight:700; text-decoration:none; transition:background 0.15s ease; }
+    .btn:hover, .links a:hover, .actions a:hover { background:var(--soft); text-decoration:none; }
+    .section-title, .month-title { display:flex; justify-content:space-between; align-items:end; gap:16px; margin:44px 0 16px; padding-bottom:10px; border-bottom:2px solid var(--line); }
+    h2 { margin:0; font-size:24px; letter-spacing:0; font-weight:800; }
+    .calendar { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); border-top:1px solid var(--line); border-left:1px solid var(--line); background:#fff; border-radius:10px; overflow:hidden; }
+    .weekday { min-height:38px; padding:10px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); background:#e9f0ec; color:#3f4a4d; font-size:13px; font-weight:800; letter-spacing:0.04em; text-align:center; }
+    .day { min-height:130px; padding:10px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); background:#fff; }
+    .day.empty { background:#f3f5f2; }
+    .day-number { display:inline-flex; justify-content:center; align-items:center; width:30px; min-height:30px; margin-bottom:8px; border-radius:6px; font-size:14px; font-weight:800; }
+    .day.has-events .day-number { background:var(--accent); color:#fff; }
+    .cal-event { margin:6px 0; padding:7px 9px; border-left:3px solid var(--accent2); border-radius:5px; background:#f8edec; font-size:13px; line-height:1.4; overflow-wrap:anywhere; }
+    .cal-event strong, .cal-event span { display:block; }
+    .cal-event strong { font-weight:700; color:var(--ink); }
+    .cal-event span { color:var(--muted); font-size:12px; margin-top:3px; }
+    .events { display:grid; gap:14px; }
+    .event { display:grid; grid-template-columns:160px minmax(0,1fr) 180px; gap:18px; padding:18px; border:1px solid var(--line); border-radius:10px; background:#fff; transition:box-shadow 0.15s ease; }
+    .event:hover { box-shadow:var(--shadow); }
+    .datebox { display:grid; align-content:start; gap:6px; min-height:80px; padding:14px; border-left:4px solid var(--accent); border-radius:8px; background:var(--soft); }
+    .datebox span, .event p { color:var(--muted); font-size:14px; }
+    .datebox span:first-child, .datebox .date { font-weight:800; font-size:17px; color:var(--ink); }
+    .event h3 { margin:0 0 8px; font-size:19px; letter-spacing:0; font-weight:800; line-height:1.4; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0; }
+    .tags span { display:inline-flex; min-height:28px; align-items:center; padding:4px 12px; border-radius:999px; background:#ece8de; color:#4a443a; font-size:13px; font-weight:700; }
+    .tags .reserve { background:#f6dada; color:var(--accent2); }
+    .actions { display:grid; align-content:start; gap:10px; }
+    .empty { padding:32px; border:1px dashed #b3bfba; border-radius:10px; background:#fff; color:var(--muted); font-size:15px; text-align:center; }
+    .print-calendar { display:none; }
+    footer { color:var(--muted); font-size:13px; }
+    @media (max-width:900px) { .event, .profile-grid, .detail-grid, .deviation-grid, .past-grid { grid-template-columns:1fr; } .actions { display:flex; flex-wrap:wrap; } }
+    @page { size:A4 portrait; margin:10mm; }
+    @media print {
+      header, main, footer { display:none; }
+      body { background:#fff; color:#000; }
+      .print-calendar { display:block; }
+      .print-month { page-break-after:always; break-after:page; }
+      .print-month:last-child { page-break-after:auto; break-after:auto; }
+      .print-title { display:flex; justify-content:space-between; align-items:baseline; gap:8mm; margin:0 0 4mm; border-bottom:.4mm solid #000; padding-bottom:2mm; }
+      .print-title h1 { margin:0; color:#000; font-size:16pt; line-height:1.2; }
+      .print-title p { margin:0; color:#333; font-size:8pt; }
+      .print-grid { display:grid; grid-template-columns:repeat(7,1fr); border-top:.25mm solid #777; border-left:.25mm solid #777; }
+      .print-weekday { min-height:7mm; padding:1.5mm; border-right:.25mm solid #777; border-bottom:.25mm solid #777; background:#e9ece9; font-size:8pt; font-weight:700; text-align:center; }
+      .print-day { min-height:34mm; padding:1.5mm; border-right:.25mm solid #777; border-bottom:.25mm solid #777; overflow:hidden; }
+      .print-day.empty { background:#f4f4f4; }
+      .print-day-number { display:block; margin-bottom:1mm; font-size:8pt; font-weight:800; }
+      .print-cal-event { margin:0 0 1mm; padding-left:1.2mm; border-left:.7mm solid #555; font-size:6.8pt; line-height:1.25; overflow-wrap:anywhere; }
+      .print-cal-event strong, .print-cal-event span { display:block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <a class="back" href="../index.html">一覧へ戻る</a>
+      <h1>東京女学館中学校</h1>
+      <div class="meta">
+        <span class="pill">イベント 13件</span>
+        
+        <span class="pill">月数 9ヶ月</span>
+        <span class="pill">取得基準日 2026-04-30</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="panel">
+      <p>〒150-0012 東京都渋谷区広尾3-7-16</p>
+      <p>TEL 03-3400-0867</p>
+      <p>日比谷線「広尾駅」4番より徒歩12分、各線「渋谷駅」よりバス10分、各線「恵比寿駅」よりバス8分、バス「東京女学館前」下車</p>
+      <div class="links">
+        <a href="https://www.tjk.jp/mh/" target="_blank" rel="noopener">公式サイト</a>
+        <a href="https://www.study1.jp/kanto/school/B13P089/briefing/" target="_blank" rel="noopener">説明会ページ</a>
+        <a href="https://tjk.jp/mh/examinee/requirements/" target="_blank" rel="noopener">入試要項</a>
+        <button class="btn" type="button" onclick="window.print()">A4月別カレンダーを印刷</button>
+      </div>
+      <div class="deviation-grid">
+            <div class="deviation-card">
+              <span>スタディ</span>
+              <strong>54</strong>
+              <a href="https://www.study1.jp/kanto/list/deviation.html" target="_blank" rel="noopener">出典</a>
+            </div>
+            
+            <div class="deviation-card">
+              <span>みんな 2026</span>
+              <strong>54 - 60</strong>
+              <a href="https://www.minkou.jp/junior/school/7740/" target="_blank" rel="noopener">出典</a>
+            </div>
+            
+            <div class="deviation-card">
+              <span>首都圏模試</span>
+              <strong>女61-66</strong>
+              <a href="https://www.syutoken-mosi.co.jp/db/school/?code=1209&amp;p=3" target="_blank" rel="noopener">出典</a>
+            </div>
+            
+            <div class="deviation-card">
+              <span>四谷大塚</span>
+              <strong>A80 女49-55 / C50 女46-52</strong>
+              <a href="https://www.yotsuyaotsuka.com/juken/data/?code=490" target="_blank" rel="noopener">出典</a>
+            </div>
+            </div>
+      <div class="profile-grid">
+            <div class="info-card">
+              <span>設置</span>
+              <strong>私立中学</strong>
+            </div>
+            
+            <div class="info-card">
+              <span>学校種別</span>
+              <strong>女子校</strong>
+            </div>
+            
+            <div class="info-card">
+              <span>生徒総数</span>
+              <strong>男子 ： - 名 / 女子 ：707名 / クラス数 ：18クラス</strong>
+            </div>
+            
+            <div class="info-card">
+              <span>制服</span>
+              <strong>あり</strong>
+            </div>
+            </div>
+    </section>
+    <section>
+      <div class="section-title"><h2>学校詳細</h2><span>出典別偏差値・特色・学費など</span></div>
+      <div class="detail-grid">
+        <section class="data-panel"><h2>特徴</h2><ul><li>高校入試(募集) / 学期 / 登校時間 / 完全下校時間 / 土曜授業</li><li>なし / 3学期制 / 8:25 / 17:40 / あり：毎週</li></ul></section>
+        <section class="data-panel"><h2>学費</h2><ul><li>初年度納入金合計 / 年間学費</li><li>1,434,000 円 / 984,000 円</li></ul><ul><li>初年度のみの納入金 入学金 290,000 円 施設費 160,000 円 教育充実費 - その他 - 初年度のみの納入金 合計（Ａ） 450,000 円 / 初年度のみの納入金 / 入学金 / 290,000 円 / 施設費 / 160,000 円 / 教育充実費 / - / その他 / - / 初年度のみの納入金 合計（Ａ） / 450,000 円 / 年学費 授業料 582,000 円 施設維持費 96,000 円 教育充実費 - その他 306,000 円 年学費 合計（Ｂ） 984,000 円 / 年学費 / 授業料 / 582,000 円 / 施設維持費 / 96,000 円 / 教育充実費 / - / その他 / 306,000 円 / 年学費 合計（Ｂ） / 984,000 円</li><li>初年度のみの納入金</li><li>入学金 / 290,000 円</li><li>施設費 / 160,000 円</li><li>教育充実費 / -</li><li>その他 / -</li><li>初年度のみの納入金 合計（Ａ） / 450,000 円</li><li>年学費</li><li>授業料 / 582,000 円</li><li>施設維持費 / 96,000 円</li><li>教育充実費 / -</li><li>その他 / 306,000 円</li><li>年学費 合計（Ｂ） / 984,000 円</li><li>初年度納入金 合計（Ａ＋Ｂ） / 1,434,000 円</li></ul><ul><li>※上記は一般学級の金額。</li><li>国際学級は授業料816,000円、その他294,000円 ※その他は、教材費(iPad費用、軽井沢学習寮費含む）、父母の会会費、地震対策費など ※別途、学校指定品費等あり</li></ul></section>
+        <section class="data-panel"><h2>入試結果</h2><ul><li>2026年 / 【2/1】第1回 / ４教科 / 女 / 35 / 121 / 101 / 46 / 2.2</li><li>試験合計 / 35 / 121 / 101 / 46 / 2.2</li><li>【2/1 午後 】第2回 / ２教科 / 女 / 35 / 227 / 211 / 106 / 2.0</li><li>試験合計 / 35 / 227 / 211 / 106 / 2.0</li><li>【2/2 午後】第3回 / ２教科 / 女 / 20 / 316 / 198 / 100 / 2.0</li><li>試験合計 / 20 / 316 / 198 / 100 / 2.0</li></ul></section>
+      </div>
+      
+                    <details class="info-section">
+                      <summary>スタディ注目ポイント</summary>
+                      <div><ul><li>広尾の高台の美しい校舎。</li><li>生き生きとして、品位ある校風。</li><li>生徒自治が盛んで、積極的な学校生活を通して一人ひとりが思いやりや責任感など包括的なリーダーシップ（インクルーシブ・リーダーシップ）を養っている。</li><li>2004年に開始した国際学級は帰国生だけでなく日本で暮らした一般生も入学できるのが特徴。</li><li>英語の授業は習熟度別に行い、高校段階でほぼ全員が英検2級以上を取得する。</li><li>一般学級も分割授業や多様な選択授業などで高い英語力を身につける。</li><li>2025年の大学合格実績（既卒生を含む）は、国公立：東京外国語大2名、東京藝大2名、東京科学大1名、東北大1名、埼玉大1名、奈良女子大1名。</li><li>私立：慶應大27名、早稲田大28名、上智大19名、東京理科大7名、国際基督教大1名、明治大38名、青山学院大32名、立教大53名、中央大21名、法政大25名、北里大11名など。</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>建学の精神・教育理念</summary>
+                      <div><ul><li>高い品性を備え、人と社会に貢献する女性の育成 「高い品性を備え、人と社会に貢献する女性の育成」を教育目標に掲げている。</li><li>この目標を支える柱が、「他者を思いやる心の育成」「基礎・基本に根ざした個性の伸長」「自ら問題を発見し、解決する力の育成」だ。</li><li>さらにこの教育目標を具体的に実現するための実践課題として、①心の教育・人格教育、②自国文化の理解、③グローバルシティズンシップ教育、④STEAM教育─―という「4つの重点課題」を設定している。</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>教育の特色</summary>
+                      <div><ul><li>国際学級と一般学級を設置 世界を舞台に活躍できる女性の育成をめざして、帰国生および一般生から成る国際学級を設置している。</li><li>中学では英語経験別に3グループに分け、ネイティヴ教員と日本人教員の３名がチームで担当し、きめ細かく指導。</li><li>また中1からGTEC受験を実施し、高校生になるまでに英検2級合格を目指す。</li><li>高校では国際コースとなり、国内大学・海外大学への進学に合ったカリキュラムが選択できる。</li><li>一般学級も英語をはじめ各教科バランスよく学び、時代に応じた確かな学力を育成する。</li><li>英語・数学は少人数授業。</li><li>中学で行う英語の「訂正ノート」は伝統の指導だ。</li><li>小テストを貼り付け、出来なかった問題を自分で復習し、担当教員に提出。</li><li>ノートのやりとりは、生徒が確実に理解できるまで続く。</li><li>国際交流プログラムも充実。</li><li>アメリカ文化研修、東南アジア文化研修、マレーシアやタイ、韓国の提携校との相互交流、イギリス・アメリカへの長期留学など、国際学級・一般学級ともに実施している。</li><li>言語教育・コミュニケーション教育も伝統だ。</li><li>国語の1分間スピーチ、ディベート、社会の「歴史研究ノート」や「ニュース・ノート」の作成など多くの教科で「書く力」「話す力」を伸ばす活動を取り入れている。</li><li>芸術教育にも注力。</li><li>中学では琴、高校ではギター、ヴァイオリンの選択科目を設置。</li><li>芸術分野に秀でた生徒も多く、校内記念講堂では生徒によるピアノやヴァイオリンのコンサートが開かれる。</li><li>校内には油絵や書道など完成度の高い作品が展示され、みんなで称え合う。</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>施設設備</summary>
+                      <div><ul><li>スタンウェイのフルコンサートピアノを設置 ゆとりある美しいキャンパスで小学校から高校までともに学ぶ。</li><li>記念講堂は照明や音響など最新の諸設備を備え、スタンウェイのフルコンサートピアノを所有。</li><li>図書館は蔵書約6万1千冊。</li><li>体育館は3つ、うち一つは観客スタンド設置で国際試合も開催できる広さを誇る。</li><li>開閉式天井の快適な室内温水プール。</li><li>収納力・使い勝手とも抜群の個人ロッカー。</li><li>広い食堂はメニューも豊富で焼きたて自家製パンも人気だ。</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>学校行事</summary>
+                      <div><ul><li>体育大会・創立記念祭の二大行事、中1から高2まで行われる宿泊行事 6月に開催される体育大会は、学年対抗で競われる競技のほかに、中2から高2までの各学年によるダンスが彩りを添える。</li><li>高3が演じるカドリール・プロムナードは本校の象徴。</li><li>11月の創立記念祭（学園祭）では、学習の成果を発表するクラス展示・学年展示のほか、運動部が他校と対戦する招待試合、文化部の展示・舞台発表・演奏など、クラブや委員会の活動の成果を発表する。</li><li>宿泊行事は、中1から高2まで毎年行っている。</li><li>5月には中2のイングリッシュキャンプ、高1の研修旅行。</li><li>7月には中1が軽井沢学習寮に宿泊して、自然に触れ、カーリング体験などを通して友と親睦を深める。</li><li>12月には中3が広島修学旅行に行き、平和学習に取り組む。</li><li>3月には高2が京都・奈良修学旅行に行き、自国文化について理解を深める。</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>部活動</summary>
+                      <div><ul><li>オーケストラ部、ダンス部、パフォーマンス部など多彩 クラブ活動が盛ん。</li><li>活動日は週2回～3回など、クラブによる。</li><li>運動部は、ダンス部、ソフトボール部、テニス部、剣道部など（計9）。</li><li>水泳部は校内の温水プールで練習し、関東大会にも出場している。</li><li>文化部は、演劇部、茶道部（裏千家・表千家）、書道部、ギター部など（計20）。</li><li>部員100名超のオーケストラ部、チアダンスやジャグリングを行うパフォーマンス部、英語のミュージカルを上演する英語部、百人一首の競技かるたに取り組むかるた部など、ユニークなクラブが豊富だ。</li><li>同好会は模擬国連同好会、ストリートダンス同好会など（計4）。</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>進路指導</summary>
+                      <div><ul><li>例年東大、一橋大などに合格。</li><li>難関私立大・医歯薬系も多数 生徒が中心になって進路について学ぶ。</li><li>中3では働いている方へのインタビューを通して職業研究を実施する。</li><li>高1の研修旅行では1人1人自分自身の将来の目標についてスピーチを行う。</li><li>このような機会を通して職業観を養い進路選択に向けて自己をみつめていく。</li><li>高2以降は文理に分かれて大学進学を見据えて学習し、自由選択科目も多様に設置されている。</li><li>例年東大、一橋大、東京外語大、東京藝術大、国際教養大など難関国公立大に合格、私立大学も早慶上智、東京理科大、GMARCH、医歯薬系など多数合格している。</li><li>指定校推薦は東京女子医科大、聖マリアンナ医科大、慶應義塾大、早稲田大、上智大、立教大、青山学院大、北里大など多数。</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>その他</summary>
+                      <div><ul><li>インクルーシブリーダーシップを育成する生徒会活動 生徒自治を推進している。</li><li>その中心となるのが生徒会だ。</li><li>生徒総会を最高の議決機関とし、生徒会長をはじめとする執行委員会、各委員会の委員長などが中心となって、全校生徒が協力し合い、学校行事や日常生活のルールなどを民主的に決定している。</li><li>また、体育大会、修学旅行、研修旅行は生徒主体の実行委員会により運営される。</li><li>こうした活動は、東京女学館がめざす「リーダーシップ」と「インクルーシブリーダーシップ」の両方の養成につながっている。</li><li>インクルーシブリーダーシップとは、人間同士の信頼関係を自ら築き、それを基によりよい社会をつくりあげていく力のことであり、東京女学館では21世紀を生きる人々に求められる力として大切にしている。</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>スクール特集</summary>
+                      <div><ul><li>自ら進路を探究するキャリア教育と理系コースの学習・進学指導を探る 公開日：2025/7/30</li><li>2026年度から国際学級が2クラスに！海外大進学や理系の進路選択が拡充 公開日：2024/8/27</li><li>英語圏からアジアまで。人との交流を大切にした海外研修で大きく成長！ 公開日：2023/9/19</li><li>「なりたい自分」を探究し、一人ひとりを丁寧にサポートする進路指導 公開日：2022/9/15</li><li>東大・一橋大入学者から後輩たちへ 希望大学合格までの体験談とアドバイス 公開日：2018/5/29</li></ul></div>
+                    </details>
+                    
+
+                    <details class="info-section">
+                      <summary>学校からのお知らせ</summary>
+                      <div><ul><li>03/23 新着情報｜入試情報 2026年度 編入学試験の変更について</li><li>03/23 新着情報｜学校より｜入試情報 2026年度 一般入試【第1回（2月1日AM）】社会の解答の訂正</li><li>03/16 新着情報｜入試情報 3月29日（日）JOBA主催の海外・帰国生向け個別相談会に参加します</li><li>03/16 TJK Life｜学習・進路 国際学級の中学1年で“World Wonders”ユニットに取り組みました</li><li>03/16 TJK Life｜グローバル｜学習・進路｜生徒の活動 中学1年 国際学級でMothers’ Lunchを開催しました</li></ul></div>
+                    </details>
+                    
+    </section>
+    
+    <section>
+      <div class="section-title"><h2>月別カレンダー</h2><span>13件</span></div>
+      
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年5月</h2>
+                <span>1件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">9</span>
+              
+            <div class="cal-event">
+              <strong>第1回　学校説明会</strong>
+              <span>9:45～11:45</span>
+              <span>予約受付開始：2026年4月9日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年6月</h2>
+                <span>1件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">13</span>
+              
+            <div class="cal-event">
+              <strong>第1回　オープンスクール</strong>
+              <span>14:30～16:30</span>
+              <span>予約受付開始：2026年5月13日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年7月</h2>
+                <span>2件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">11</span>
+              
+            <div class="cal-event">
+              <strong>第2回　学校説明会</strong>
+              <span>14:00～16:00</span>
+              <span>予約受付開始：2026年6月11日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">18</span>
+              
+            <div class="cal-event">
+              <strong>国際学級・帰国生対象説明会</strong>
+              <span>13:30～15:30</span>
+              <span>予約受付開始：2026年6月18日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            <div class="day empty"></div></div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年8月</h2>
+                <span>1件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">29</span>
+              
+            <div class="cal-event">
+              <strong>校内見学ツアー</strong>
+              <span>13:30～16:30</span>
+              <span>申し込み開始：2026年8月5日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年10月</h2>
+                <span>2件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">3</span>
+              
+            <div class="cal-event">
+              <strong>第2回　オープンスクール</strong>
+              <span>14:30～16:30</span>
+              <span>予約受付開始：2026年9月3日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">24</span>
+              
+            <div class="cal-event">
+              <strong>第3回　学校説明会</strong>
+              <span>9:45～11:45</span>
+              <span>予約受付開始：2026年9月24日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            </div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年11月</h2>
+                <span>3件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">7</span>
+              
+            <div class="cal-event">
+              <strong>創立138周年記念祭（学園祭）</strong>
+              <span>11:15～16:30</span>
+              <span>予約受付開始：2026年10月7日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">8</span>
+              
+            <div class="cal-event">
+              <strong>創立138周年記念祭（学園祭）</strong>
+              <span>9:00～16:30</span>
+              <span>予約受付開始：2026年10月7日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">14</span>
+              
+            <div class="cal-event">
+              <strong>第1回　入試説明会</strong>
+              <span>14:00～16:00</span>
+              <span>予約受付開始：2026年10月14日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年12月</h2>
+                <span>1件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">12</span>
+              
+            <div class="cal-event">
+              <strong>第2回　入試説明会</strong>
+              <span>10:00～12:00</span>
+              <span>予約受付開始：2026年11月12日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2027年1月</h2>
+                <span>1件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">9</span>
+              
+            <div class="cal-event">
+              <strong>第4回　学校説明会</strong>
+              <span>14:00～16:00</span>
+              <span>予約受付開始：2026年12月9日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2027年3月</h2>
+                <span>1件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">13</span>
+              
+            <div class="cal-event">
+              <strong>校内見学ツアー</strong>
+              <span>10:00～13:00</span>
+              <span>申し込み開始：2027年2月13日（土）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+    </section>
+    <section>
+      <div class="section-title"><h2>イベント一覧</h2><span>13件</span></div>
+      <div class="events">
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/5/9(土)</strong>
+                <span>9:45～11:45</span>
+              </div>
+              <div>
+                <h3>第1回　学校説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年4月9日（木）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>学校説明会は東京女学館の教育方針・学校生活等をご理解いただく機会です。 ※ご予約は1組2名(保護者1名と受験生1名)までとさせていただきます。 ※上履きは不要です。 ※全体会の終了後、希望者は授業見学ができます。個別相談も実施します。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20260509/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/6/13(土)</strong>
+                <span>14:30～16:30</span>
+              </div>
+              <div>
+                <h3>第1回　オープンスクール</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年5月13日（水）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>生徒のクラブ活動や学校生活の様子をご自由にご覧いただけます。 ※上履きは不要です。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20260613/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/7/11(土)</strong>
+                <span>14:00～16:00</span>
+              </div>
+              <div>
+                <h3>第2回　学校説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年6月11日（木）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>学校説明会は東京女学館の教育方針・学校生活等をご理解いただく機会です。 ※ご予約は1組2名(保護者1名と受験生1名)までとさせていただきます。 ※上履きは不要です。 ※全体会の終了後、希望者は校内見学ができます。個別相談も実施します。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20260711/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/7/18(土)</strong>
+                <span>13:30～15:30</span>
+              </div>
+              <div>
+                <h3>国際学級・帰国生対象説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年6月18日（木）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>国際学級と帰国生入試に特化した説明会です。帰国生入試や国際学級の特徴についてご説明いたします。 ※校内見学あり。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20260718/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/8/29(土)</strong>
+                <span>13:30～16:30</span>
+              </div>
+              <div>
+                <h3>校内見学ツアー</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">申し込み開始：2026年8月5日（水）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>インタープリター(生徒有志による案内係)の生徒が学校の様子をお話させていただきながら、校内をご案内いたします。 所要時間は40分~ 1時間です。 ①13:30～ ②14:30～ ③15:30～</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20260829/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/10/3(土)</strong>
+                <span>14:30～16:30</span>
+              </div>
+              <div>
+                <h3>第2回　オープンスクール</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年9月3日（木）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>生徒のクラブ活動や学校生活の様子をご自由にご覧いただけます。 ※上履きは不要です。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20261003/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/10/24(土)</strong>
+                <span>9:45～11:45</span>
+              </div>
+              <div>
+                <h3>第3回　学校説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年9月24日（木）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>学校説明会は東京女学館の教育方針・学校生活等をご理解いただく機会です。 ※ご予約は1組2名(保護者1名と受験生1名)までとさせていただきます。 ※上履きは不要です。 ※全体会の終了後、希望者は授業見学ができます。個別相談も実施します。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20261024/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/11/7(土)</strong>
+                <span>11:15～16:30</span>
+              </div>
+              <div>
+                <h3>創立138周年記念祭（学園祭）</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年10月7日（水）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>※入試個別相談を実施。 ※定員・人数制限なし。 ※入場受付は16:00終了。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20261107/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/11/8(日)</strong>
+                <span>9:00～16:30</span>
+              </div>
+              <div>
+                <h3>創立138周年記念祭（学園祭）</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年10月7日（水）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>※入試個別相談を実施。 ※定員・人数制限なし。 ※入場受付は16:00終了。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20261108/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/11/14(土)</strong>
+                <span>14:00～16:00</span>
+              </div>
+              <div>
+                <h3>第1回　入試説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生（小学6年生）・保護者</span>
+                  <span class="reserve">予約受付開始：2026年10月14日（水）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>入試説明会では東京女学館の入試について、各教科より出題傾向・対策など具体的にご説明いたします。 ※校内見学あり。 ※ご参加は受験生1名・保護者1名までとさせていただきます。 ※上履きは不要です。 ※全体会終了後、希望者は校内見学ができます。また、入試個別相談も受け付けます。 ※第1回・第2回ともに内容は同じです。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20261114/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/12/12(土)</strong>
+                <span>10:00～12:00</span>
+              </div>
+              <div>
+                <h3>第2回　入試説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生（学年制限なし）・保護者</span>
+                  <span class="reserve">予約受付開始：2026年11月12日（木）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>入試説明会では東京女学館の入試について、各教科より出題傾向・対策など具体的にご説明いたします。 ※校内見学あり。 ※ご参加は受験生1名・保護者1名までとさせていただきます。 ※上履きは不要です。 ※全体会終了後、希望者は校内見学ができます。また、入試個別相談も受け付けます。 ※第1回・第2回ともに内容は同じです。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20261212/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2027/1/9(土)</strong>
+                <span>14:00～16:00</span>
+              </div>
+              <div>
+                <h3>第4回　学校説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">予約受付開始：2026年12月9日（水）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>学校説明会は東京女学館の教育方針・学校生活等をご理解いただく機会です。 ※ご予約は1組2名(保護者1名と受験生1名)までとさせていただきます。 ※上履きは不要です。 ※全体会の終了後、希望者は校内見学ができます。個別相談も実施します。</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20270109/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2027/3/13(土)</strong>
+                <span>10:00～13:00</span>
+              </div>
+              <div>
+                <h3>校内見学ツアー</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>受験生・保護者</span>
+                  <span class="reserve">申し込み開始：2027年2月13日（土）10:00〜</span>
+                  <span>開始日時あり</span>
+                </div>
+                <p>インタープリター(生徒有志による案内係)の生徒が学校の様子をお話させていただきながら、校内をご案内いたします。 所要時間は40分~ 1時間です。 ①10:00～ ②11:00～ ③12:00～</p>
+              </div>
+              <div class="actions">
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P089/briefing/detail/20270313/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://tjk.jp/mh/examinee/briefing/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            </div>
+    </section>
+  </main>
+  <footer>掲載情報は取得時点のものです。参加前に各校の公式サイトで最新情報を確認してください。</footer>
+  <div class="print-calendar">
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2026年5月</h1>
+                <p>1件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">9</span>
+              
+            <div class="print-cal-event">
+              <strong>第1回　学校説明会</strong>
+              <span>9:45～11:45</span>
+              <span>予約受付開始：2026年4月9日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2026年6月</h1>
+                <p>1件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">13</span>
+              
+            <div class="print-cal-event">
+              <strong>第1回　オープンスクール</strong>
+              <span>14:30～16:30</span>
+              <span>予約受付開始：2026年5月13日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2026年7月</h1>
+                <p>2件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">11</span>
+              
+            <div class="print-cal-event">
+              <strong>第2回　学校説明会</strong>
+              <span>14:00～16:00</span>
+              <span>予約受付開始：2026年6月11日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">18</span>
+              
+            <div class="print-cal-event">
+              <strong>国際学級・帰国生対象説明会</strong>
+              <span>13:30～15:30</span>
+              <span>予約受付開始：2026年6月18日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            <div class="print-day empty"></div></div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2026年8月</h1>
+                <p>1件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">29</span>
+              
+            <div class="print-cal-event">
+              <strong>校内見学ツアー</strong>
+              <span>13:30～16:30</span>
+              <span>申し込み開始：2026年8月5日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2026年10月</h1>
+                <p>2件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">3</span>
+              
+            <div class="print-cal-event">
+              <strong>第2回　オープンスクール</strong>
+              <span>14:30～16:30</span>
+              <span>予約受付開始：2026年9月3日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">24</span>
+              
+            <div class="print-cal-event">
+              <strong>第3回　学校説明会</strong>
+              <span>9:45～11:45</span>
+              <span>予約受付開始：2026年9月24日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            </div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2026年11月</h1>
+                <p>3件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">7</span>
+              
+            <div class="print-cal-event">
+              <strong>創立138周年記念祭（学園祭）</strong>
+              <span>11:15～16:30</span>
+              <span>予約受付開始：2026年10月7日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">8</span>
+              
+            <div class="print-cal-event">
+              <strong>創立138周年記念祭（学園祭）</strong>
+              <span>9:00～16:30</span>
+              <span>予約受付開始：2026年10月7日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">14</span>
+              
+            <div class="print-cal-event">
+              <strong>第1回　入試説明会</strong>
+              <span>14:00～16:00</span>
+              <span>予約受付開始：2026年10月14日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2026年12月</h1>
+                <p>1件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">12</span>
+              
+            <div class="print-cal-event">
+              <strong>第2回　入試説明会</strong>
+              <span>10:00～12:00</span>
+              <span>予約受付開始：2026年11月12日（木）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2027年1月</h1>
+                <p>1件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">9</span>
+              
+            <div class="print-cal-event">
+              <strong>第4回　学校説明会</strong>
+              <span>14:00～16:00</span>
+              <span>予約受付開始：2026年12月9日（水）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>東京女学館中学校 2027年3月</h1>
+                <p>1件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">13</span>
+              
+            <div class="print-cal-event">
+              <strong>校内見学ツアー</strong>
+              <span>10:00～13:00</span>
+              <span>申し込み開始：2027年2月13日（土）10:00〜</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            </div>
+</body>
+</html>
