@@ -1466,7 +1466,7 @@ def main() -> None:
             </div>
             ${{deviationRows(school)}}
             <p>${{escapeHtml(school['住所'])}}</p>
-            <p>${{escapeHtml([school['設置'], school['学校種別']].filter(Boolean).join(' / '))}} / イベント ${{eventCountForSchool(school['学校名'])}}件{'' if EXCLUDE_PAST_EXAMS else " / 過去問PDF ${{pastExamCountForSchool(school)}}件"}</p>
+            <p>${{escapeHtml([school['設置'], school['学校種別']].filter(Boolean).join(' / '))}} / イベント ${{eventCountForSchool(school['学校名'])}}件{'' if EXCLUDE_PAST_EXAMS else " / 過去問PDF ${pastExamCountForSchool(school)}件"}</p>
             <p>${{escapeHtml(school['TEL'])}}</p>
             <p>${{escapeHtml(school['最寄駅・アクセス'])}}</p>
           </div>
