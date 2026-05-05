@@ -21,6 +21,7 @@ SCHOOLS = {
     "広尾学園中学校": "B13P111",
     "東京女学館中学校": "B13P089",
     "普連土学園中学校": "B13P115",
+    "女子学院中学校": "B13P061",
 }
 
 MINKOU_URLS = {
@@ -34,6 +35,7 @@ MINKOU_URLS = {
     "B13P111": "https://www.minkou.jp/junior/school/7497/",
     "B13P089": "https://www.minkou.jp/junior/school/7740/",
     "B13P115": "https://www.minkou.jp/junior/school/7504/",
+    "B13P061": "https://www.minkou.jp/junior/school/7475/",
 }
 
 SYUTOKEN_CODES = {
@@ -47,6 +49,7 @@ SYUTOKEN_CODES = {
     "B13P111": "1239",
     "B13P089": "1209",
     "B13P115": "1244",
+    "B13P061": "1172",
 }
 
 YOTSUYA_CODES = {
@@ -60,6 +63,7 @@ YOTSUYA_CODES = {
     "B13P111": "313",
     "B13P089": "490",
     "B13P115": "653",
+    "B13P061": "342",
 }
 
 ACCESS_OVERRIDES = {
@@ -73,6 +77,7 @@ ACCESS_OVERRIDES = {
     "広尾学園中学校": "東京メトロ日比谷線「広尾駅」4番出口すぐ、バス「日赤医療センター下・広尾学園前」下車すぐ",
     "東京女学館中学校": "日比谷線「広尾駅」4番より徒歩12分、各線「渋谷駅」よりバス10分、各線「恵比寿駅」よりバス8分、バス「東京女学館前」下車",
     "普連土学園中学校": "都営浅草線「三田駅」より徒歩7分、JR「田町駅」より徒歩8分",
+    "女子学院中学校": "東京メトロ丸ノ内線「麹町駅」5・6番出口より徒歩3分、東京メトロ半蔵門線「半蔵門駅」5番出口より徒歩6分、JR・東京メトロ南北線・都営新宿線「市ヶ谷駅」2・3番出口より徒歩8〜10分、JR・東京メトロ丸ノ内線・南北線「四ツ谷駅」麹町口より徒歩12〜15分",
 }
 
 UA = {"User-Agent": "Mozilla/5.0"}
@@ -257,6 +262,13 @@ RESERVATION_RULES = [
     # 普連土学園中学校
     ("普連土学園中学校", "2026/5/", "生徒による校舎案内ツアー", "予約受付開始：2026年4月25日（土）13:00〜", "exact", "https://www.friends.ac.jp/admission-events/22372/"),
     ("普連土学園中学校", "", "", "要予約イベントの予約受付開始日時は3週間前を目安にトップページへ掲示", "rule", "https://www.friends.ac.jp/examination/event.html"),
+    # 女子学院中学校
+    ("女子学院中学校", "2026/5/30", "生徒による学校紹介", "予約受付：2026年5月7日（木）11:00〜5月22日（金）11:00（miraicompass、申込先着）", "range", "https://www.joshigakuin.ed.jp/exam/inspection/"),
+    ("女子学院中学校", "2026/10/10", "文化祭", "詳細は学校公式サイトで追って案内予定", "tentative", "https://www.joshigakuin.ed.jp/exam/festival/"),
+    ("女子学院中学校", "2026/10/12", "文化祭", "詳細は学校公式サイトで追って案内予定", "tentative", "https://www.joshigakuin.ed.jp/exam/festival/"),
+    ("女子学院中学校", "2026/11/10", "学校説明会", "詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）", "tentative", "https://www.joshigakuin.ed.jp/exam/guidance/"),
+    ("女子学院中学校", "2026/11/12", "学校説明会", "詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）", "tentative", "https://www.joshigakuin.ed.jp/exam/guidance/"),
+    ("女子学院中学校", "2026/11/14", "学校説明会", "詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）", "tentative", "https://www.joshigakuin.ed.jp/exam/guidance/"),
 ]
 
 

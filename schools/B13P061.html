@@ -1,0 +1,2462 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>女子学院中学校 | イベント詳細</title>
+  <style>
+    :root { --bg:#f5f7f3; --surface:#fff; --surface-2:#fafbf7; --ink:#14191c; --muted:#50595d; --line:#ccd5d1; --line-soft:#e3e9e6; --accent:#1e655c; --accent2:#8a3434; --soft:#e3edea; --shadow:0 14px 32px rgba(20,30,35,.10); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif; font-size:16px; line-height:1.7; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    header { background:#173b3b; color:#fff; border-bottom:5px solid #c28a35; }
+    .topbar, main, footer { max-width:1180px; margin:0 auto; padding:32px 24px; }
+    main { padding-top:32px; }
+    .back { color:#d7ece7; font-size:14px; font-weight:700; }
+    .back:hover { color:#fff; }
+    h1 { margin:12px 0 0; font-size:clamp(28px,4.4vw,44px); line-height:1.2; letter-spacing:0; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .pill { display:inline-flex; min-height:34px; align-items:center; padding:6px 14px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.10); color:#f1faf7; font-size:14px; font-weight:600; }
+    .panel { padding:20px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .panel p { margin:8px 0; color:var(--muted); font-size:15px; }
+    .profile-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:18px; }
+    .info-card { min-height:84px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface-2); }
+    .info-card span { display:block; margin-bottom:6px; color:var(--muted); font-size:13px; font-weight:800; letter-spacing:0.02em; }
+    .info-card strong { display:block; font-size:16px; line-height:1.5; font-weight:700; }
+    .deviation-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:18px; }
+    .deviation-card { min-height:96px; padding:16px; border:1px solid #b8cdc6; border-radius:10px; background:#eff7f3; }
+    .deviation-card span { display:block; margin-bottom:6px; color:#3f4a4d; font-size:13px; font-weight:800; letter-spacing:0.02em; }
+    .deviation-card strong { display:block; font-size:24px; line-height:1.2; color:var(--accent); font-weight:800; }
+    .deviation-card a { display:inline-flex; margin-top:6px; font-size:13px; font-weight:800; }
+    .detail-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; }
+    .data-panel { padding:20px; border:1px solid var(--line); border-radius:10px; background:#fff; }
+    .data-panel h2 { margin:0 0 14px; font-size:20px; font-weight:800; }
+    .data-panel ul, .info-section ul { margin:0; padding-left:20px; }
+    .data-panel li, .info-section li { margin:8px 0; color:#2a3236; font-size:14px; line-height:1.65; }
+    .info-section { margin:14px 0; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; }
+    .info-section summary { cursor:pointer; padding:16px 20px; color:var(--ink); font-size:17px; font-weight:800; background:var(--surface-2); }
+    .info-section summary:hover { background:#f1f4ee; }
+    .info-section[open] summary { border-bottom:1px solid var(--line); }
+    .info-section div { padding:18px 20px; }
+    .info-section p { margin:0; color:#2a3236; font-size:15px; line-height:1.75; }
+    .past-exam-section { margin:14px 0; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; }
+    .past-exam-section summary { cursor:pointer; display:flex; justify-content:space-between; gap:12px; padding:16px 20px; color:var(--ink); font-size:17px; font-weight:800; background:var(--surface-2); }
+    .past-exam-section summary:hover { background:#f1f4ee; }
+    .past-exam-section[open] summary { border-bottom:1px solid var(--line); }
+    .past-year { border-bottom:1px solid var(--line-soft); background:#fff; }
+    .past-year:last-child { border-bottom:0; }
+    .past-year summary { cursor:pointer; display:flex; justify-content:space-between; gap:12px; padding:13px 20px; color:var(--ink); font-size:15px; font-weight:800; background:#fdfdfc; }
+    .past-year summary:hover { background:var(--surface-2); }
+    .past-year[open] summary { border-bottom:1px solid var(--line-soft); }
+    .past-grid { display:grid; grid-template-columns:minmax(0,1.8fr) minmax(100px,0.6fr) minmax(100px,0.6fr); }
+    .past-head, .past-row > div { padding:12px 16px; border-bottom:1px solid var(--line-soft); }
+    .past-head { background:#e9f0ec; color:#3f4a4d; font-size:13px; font-weight:800; letter-spacing:0.02em; }
+    .past-row { display:contents; }
+    .past-subject { font-size:14px; font-weight:700; color:var(--ink); overflow-wrap:anywhere; }
+    .past-action { display:flex; align-items:center; }
+    .past-action a, .past-action .missing { display:inline-flex; min-height:32px; align-items:center; padding:5px 12px; border-radius:6px; font-size:13px; font-weight:800; text-decoration:none; }
+    .past-action a { border:1px solid #b8cdc6; background:#eff7f3; color:var(--accent); }
+    .past-action a:hover { background:var(--soft); }
+    .past-action .missing { color:var(--muted); }
+    .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    .btn, .links a, .actions a { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:8px 14px; border:1px solid var(--accent); border-radius:8px; background:#fff; color:var(--accent); font-size:14px; font-weight:700; text-decoration:none; transition:background 0.15s ease; }
+    .btn:hover, .links a:hover, .actions a:hover { background:var(--soft); text-decoration:none; }
+    .section-title, .month-title { display:flex; justify-content:space-between; align-items:end; gap:16px; margin:44px 0 16px; padding-bottom:10px; border-bottom:2px solid var(--line); }
+    h2 { margin:0; font-size:24px; letter-spacing:0; font-weight:800; }
+    .calendar { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); border-top:1px solid var(--line); border-left:1px solid var(--line); background:#fff; border-radius:10px; overflow:hidden; }
+    .weekday { min-height:38px; padding:10px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); background:#e9f0ec; color:#3f4a4d; font-size:13px; font-weight:800; letter-spacing:0.04em; text-align:center; }
+    .day { min-height:130px; padding:10px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); background:#fff; }
+    .day.empty { background:#f3f5f2; }
+    .day-number { display:inline-flex; justify-content:center; align-items:center; width:30px; min-height:30px; margin-bottom:8px; border-radius:6px; font-size:14px; font-weight:800; }
+    .day.has-events .day-number { background:var(--accent); color:#fff; }
+    .cal-event { margin:6px 0; padding:7px 9px; border-left:3px solid var(--accent2); border-radius:5px; background:#f8edec; font-size:13px; line-height:1.4; overflow-wrap:anywhere; }
+    .cal-event strong, .cal-event span { display:block; }
+    .cal-event strong { font-weight:700; color:var(--ink); }
+    .cal-event span { color:var(--muted); font-size:12px; margin-top:3px; }
+    .events { display:grid; gap:14px; }
+    .event { display:grid; grid-template-columns:160px minmax(0,1fr) 180px; gap:18px; padding:18px; border:1px solid var(--line); border-radius:10px; background:#fff; transition:box-shadow 0.15s ease; }
+    .event:hover { box-shadow:var(--shadow); }
+    .datebox { display:grid; align-content:start; gap:6px; min-height:80px; padding:14px; border-left:4px solid var(--accent); border-radius:8px; background:var(--soft); }
+    .datebox span, .event p { color:var(--muted); font-size:14px; }
+    .datebox span:first-child, .datebox .date { font-weight:800; font-size:17px; color:var(--ink); }
+    .event h3 { margin:0 0 8px; font-size:19px; letter-spacing:0; font-weight:800; line-height:1.4; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0; }
+    .tags span { display:inline-flex; min-height:28px; align-items:center; padding:4px 12px; border-radius:999px; background:#ece8de; color:#4a443a; font-size:13px; font-weight:700; }
+    .tags .reserve { background:#f6dada; color:var(--accent2); }
+    .actions { display:grid; align-content:start; gap:10px; }
+    .empty { padding:32px; border:1px dashed #b3bfba; border-radius:10px; background:#fff; color:var(--muted); font-size:15px; text-align:center; }
+    .print-calendar { display:none; }
+    footer { color:var(--muted); font-size:13px; }
+    @media (max-width:900px) { .event, .profile-grid, .detail-grid, .deviation-grid, .past-grid { grid-template-columns:1fr; } .actions { display:flex; flex-wrap:wrap; } }
+    @page { size:A4 portrait; margin:10mm; }
+    @media print {
+      header, main, footer { display:none; }
+      body { background:#fff; color:#000; }
+      .print-calendar { display:block; }
+      .print-month { page-break-after:always; break-after:page; }
+      .print-month:last-child { page-break-after:auto; break-after:auto; }
+      .print-title { display:flex; justify-content:space-between; align-items:baseline; gap:8mm; margin:0 0 4mm; border-bottom:.4mm solid #000; padding-bottom:2mm; }
+      .print-title h1 { margin:0; color:#000; font-size:16pt; line-height:1.2; }
+      .print-title p { margin:0; color:#333; font-size:8pt; }
+      .print-grid { display:grid; grid-template-columns:repeat(7,1fr); border-top:.25mm solid #777; border-left:.25mm solid #777; }
+      .print-weekday { min-height:7mm; padding:1.5mm; border-right:.25mm solid #777; border-bottom:.25mm solid #777; background:#e9ece9; font-size:8pt; font-weight:700; text-align:center; }
+      .print-day { min-height:34mm; padding:1.5mm; border-right:.25mm solid #777; border-bottom:.25mm solid #777; overflow:hidden; }
+      .print-day.empty { background:#f4f4f4; }
+      .print-day-number { display:block; margin-bottom:1mm; font-size:8pt; font-weight:800; }
+      .print-cal-event { margin:0 0 1mm; padding-left:1.2mm; border-left:.7mm solid #555; font-size:6.8pt; line-height:1.25; overflow-wrap:anywhere; }
+      .print-cal-event strong, .print-cal-event span { display:block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <a class="back" href="../index.html">一覧へ戻る</a>
+      <h1>女子学院中学校</h1>
+      <div class="meta">
+        <span class="pill">イベント 6件</span>
+        <span class="pill">過去問PDF 171件</span>
+        <span class="pill">月数 3ヶ月</span>
+        <span class="pill">取得基準日 2026-04-30</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="panel">
+      <p>〒102-0082 東京都千代田区一番町22-10</p>
+      <p>TEL 03-3263-1711</p>
+      <p>東京メトロ丸ノ内線「麹町駅」5・6番出口より徒歩3分、東京メトロ半蔵門線「半蔵門駅」5番出口より徒歩6分、JR・東京メトロ南北線・都営新宿線「市ヶ谷駅」2・3番出口より徒歩8〜10分、JR・東京メトロ丸ノ内線・南北線「四ツ谷駅」麹町口より徒歩12〜15分</p>
+      <div class="links">
+        <a href="https://www.joshigakuin.ed.jp/index.php" target="_blank" rel="noopener">公式サイト</a>
+        <a href="https://www.study1.jp/kanto/school/B13P061/briefing/" target="_blank" rel="noopener">説明会ページ</a>
+        <a href="https://www.joshigakuin.ed.jp/exam/examination/" target="_blank" rel="noopener">入試要項</a>
+        <button class="btn" type="button" onclick="window.print()">A4月別カレンダーを印刷</button>
+      </div>
+      <div class="deviation-grid">
+            <div class="deviation-card">
+              <span>スタディ</span>
+              <strong>67</strong>
+              <a href="https://www.study1.jp/kanto/list/deviation.html" target="_blank" rel="noopener">出典</a>
+            </div>
+            
+            <div class="deviation-card">
+              <span>みんな 2026</span>
+              <strong>71</strong>
+              <a href="https://www.minkou.jp/junior/school/7475/" target="_blank" rel="noopener">出典</a>
+            </div>
+            
+            <div class="deviation-card">
+              <span>首都圏模試</span>
+              <strong>女76</strong>
+              <a href="https://www.syutoken-mosi.co.jp/db/school/?code=1172&amp;p=3" target="_blank" rel="noopener">出典</a>
+            </div>
+            
+            <div class="deviation-card">
+              <span>四谷大塚</span>
+              <strong>A80 女66 / C50 女62</strong>
+              <a href="https://www.yotsuyaotsuka.com/juken/data/?code=342" target="_blank" rel="noopener">出典</a>
+            </div>
+            </div>
+      <div class="profile-grid">
+            <div class="info-card">
+              <span>設置</span>
+              <strong>私立中学</strong>
+            </div>
+            
+            <div class="info-card">
+              <span>学校種別</span>
+              <strong>女子校</strong>
+            </div>
+            </div>
+    </section>
+    <section>
+      <div class="section-title"><h2>学校詳細</h2><span>出典別偏差値・特色・学費など</span></div>
+      <div class="detail-grid">
+        
+        <section class="data-panel"><h2>学費</h2><ul><li>初年度納入金合計 / 年間学費</li><li>1,190,620 円 / 810,620 円</li></ul><ul><li>初年度のみの納入金 入学金 380,000 円 施設費 - 教育充実費 - その他 - 初年度のみの納入金 合計（Ａ） 380,000 円 / 初年度のみの納入金 / 入学金 / 380,000 円 / 施設費 / - / 教育充実費 / - / その他 / - / 初年度のみの納入金 合計（Ａ） / 380,000 円 / 年学費 授業料 540,000 円 施設維持費 228,000 円 教育充実費 - その他 42,620 円 年学費 合計（Ｂ） 810,620 円 / 年学費 / 授業料 / 540,000 円 / 施設維持費 / 228,000 円 / 教育充実費 / - / その他 / 42,620 円 / 年学費 合計（Ｂ） / 810,620 円</li><li>初年度のみの納入金</li><li>入学金 / 380,000 円</li><li>施設費 / -</li><li>教育充実費 / -</li><li>その他 / -</li><li>初年度のみの納入金 合計（Ａ） / 380,000 円</li><li>年学費</li><li>授業料 / 540,000 円</li><li>施設維持費 / 228,000 円</li><li>教育充実費 / -</li><li>その他 / 42,620 円</li><li>年学費 合計（Ｂ） / 810,620 円</li><li>初年度納入金 合計（Ａ＋Ｂ） / 1,190,620 円</li></ul><ul><li>年学費その他：冷暖房費、生徒会費、JG会費、クラス費、防災費 別途、教材費、ICT 機器購入費用、旅行積立金、学校指定品があります。</li></ul></section>
+        
+      </div>
+      <div class="empty">詳細情報は取得できませんでした。</div>
+    </section>
+    <section><div class="section-title"><h2>過去問PDF</h2><span>四谷大塚 過去問データベース掲載分</span></div>
+            <details class="past-exam-section">
+              <summary>掲載分 <span>171件</span></summary>
+              <div>
+                <details class="past-year" open>
+                  <summary>2026年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2026_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2026_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2026_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2026_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2026_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2026_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2026_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2026_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2025年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2025_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2025_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2025_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2025_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2025_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2025_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2025_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2025_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2024年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2024_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2024_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2024_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2024_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2024_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2024_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2024_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2024_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2023年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2023_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2023_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2023_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2023_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2023_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2023_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2023_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2023_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2022年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2022_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2022_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2022_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2022_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2022_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2022_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2022_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2022_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2021年 <span>7件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <span class="missing">未掲載</span>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2021_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2021_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2021_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2021_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2021_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2021_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2021_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2020年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2020_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2020_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2020_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2020_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2020_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2020_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2020_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2020_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2019年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2019_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2019_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2019_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2019_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2019_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2019_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2019_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2019_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2018年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2018_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2018_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2018_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2018_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2018_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2018_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2018_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2018_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2017年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2017_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2017_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2017_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2017_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2017_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2017_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2017_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2017_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2016年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2016_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2016_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2016_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2016_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2016_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2016_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2016_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2016_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2015年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2015_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2015_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2015_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2015_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2015_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2015_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2015_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2015_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2014年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2014_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2014_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2014_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2014_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2014_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2014_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2014_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2014_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2013年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2013_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2013_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2013_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2013_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2013_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2013_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2013_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2013_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2012年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2012_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2012_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2012_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2012_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2012_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2012_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2012_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2012_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2011年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2011_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2011_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2011_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2011_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2011_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2011_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2011_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2011_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2010年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2010_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2010_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2010_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2010_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2010_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2010_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2010_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2010_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2009年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2009_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2009_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2009_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2009_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2009_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2009_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2009_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2009_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2008年 <span>8件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2008_国語_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2008_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2008_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2008_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2008_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2008_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2008_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2008_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2007年 <span>7件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <span class="missing">未掲載</span>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2007_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2007_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2007_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2007_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2007_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2007_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2007_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2006年 <span>6件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2006_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2006_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2006_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2006_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2006_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2006_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                
+                <details class="past-year" open>
+                  <summary>2005年 <span>7件</span></summary>
+                  <div class="past-grid">
+                    <div class="past-head">科目</div>
+                    <div class="past-head">問題</div>
+                    <div class="past-head">解答</div>
+                    
+                <div class="past-row">
+                  <div class="past-subject">国語</div>
+                  <div class="past-action">
+                    <span class="missing">未掲載</span>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2005_国語_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">理科</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2005_理科_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2005_理科_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">社会</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2005_社会_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2005_社会_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                <div class="past-row">
+                  <div class="past-subject">算数</div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2005_算数_問題.pdf" target="_blank" rel="noopener">問題</a>
+                  </div>
+                  <div class="past-action">
+                    <a href="../past_exams/B13P061_女子学院中学校_default_2005_算数_解答.pdf" target="_blank" rel="noopener">解答</a>
+                  </div>
+                </div>
+                
+                  </div>
+                </details>
+                </div>
+            </details>
+            </section>
+    <section>
+      <div class="section-title"><h2>月別カレンダー</h2><span>6件</span></div>
+      
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年5月</h2>
+                <span>1件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">10</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">12</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">30</span>
+              
+            <div class="cal-event">
+              <strong>生徒による学校紹介</strong>
+              <span>10:00～</span>
+              <span>予約受付：2026年5月7日（木）11:00〜5月22日（金）11:00（miraicompass、申込先着）</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年10月</h2>
+                <span>2件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">10</span>
+              
+            <div class="cal-event">
+              <strong>文化祭(マグノリア祭)</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">12</span>
+              
+            <div class="cal-event">
+              <strong>文化祭(マグノリア祭)</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">14</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">31</span>
+              
+            </div>
+            </div>
+            </section>
+            
+            <section class="month">
+              <div class="month-title">
+                <h2>2026年11月</h2>
+                <span>3件</span>
+              </div>
+              <div class="calendar"><div class="weekday">日</div><div class="weekday">月</div><div class="weekday">火</div><div class="weekday">水</div><div class="weekday">木</div><div class="weekday">金</div><div class="weekday">土</div>
+            <div class="day ">
+              <span class="day-number">1</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">2</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">3</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">4</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">5</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">6</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">7</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">8</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">9</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">10</span>
+              
+            <div class="cal-event">
+              <strong>第1回学校説明会</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">11</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">12</span>
+              
+            <div class="cal-event">
+              <strong>第2回学校説明会</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">13</span>
+              
+            </div>
+            
+            <div class="day has-events">
+              <span class="day-number">14</span>
+              
+            <div class="cal-event">
+              <strong>第3回学校説明会</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+            </div>
+            
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">15</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">16</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">17</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">18</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">19</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">20</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">21</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">22</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">23</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">24</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">25</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">26</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">27</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">28</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">29</span>
+              
+            </div>
+            
+            <div class="day ">
+              <span class="day-number">30</span>
+              
+            </div>
+            <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div></div>
+            </section>
+            
+    </section>
+    <section>
+      <div class="section-title"><h2>イベント一覧</h2><span>6件</span></div>
+      <div class="events">
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/5/30(土)</strong>
+                <span>10:00～</span>
+              </div>
+              <div>
+                <h3>生徒による学校紹介</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>小学4～６年生とその保護者</span>
+                  <span class="reserve">予約受付：2026年5月7日（木）11:00〜5月22日（金）11:00（miraicompass、申込先着）</span>
+                  <span>受付期間あり</span>
+                </div>
+                <p>講堂にて生徒による学校紹介、クラブ紹介を行います。特別な校舎見学や説明会はありません。 【時間・定員】 ・第１回 受付問始時刻　9:30 講堂問始時刻　10:00 講堂終了時刻　10:50 定員　450組（６年生枠200組、4・5年生枠250組） ・第2回 受付問始時刻　11:10 講堂問始時刻　11:40 講堂終了時刻　12:30 定員　450組（６年生枠200組、4・5年生枠250組） ・第3回 受付問始時刻　12:50 講堂問始時刻　13:20 講堂終了時刻　14:10 定員　450組（６年生枠200組、4・5年生枠250組） ・第4回 受付問始時刻　14:30 講堂問始時刻　15:00 講堂終了時刻　15:50 定員　450組（６年生枠200組、4・5年生枠250組）</p>
+              </div>
+              <div class="actions">
+                <a href="https://www.joshigakuin.ed.jp/exam/inspection/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P061/briefing/detail/20260530/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://www.joshigakuin.ed.jp/exam/inspection/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/10/10(土)</strong>
+                <span>時間未掲載</span>
+              </div>
+              <div>
+                <h3>文化祭(マグノリア祭)</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>-</span>
+                  <span class="reserve">詳細は学校公式サイトで追って案内予定</span>
+                  <span>予定</span>
+                </div>
+                
+              </div>
+              <div class="actions">
+                <a href="https://www.joshigakuin.ed.jp/exam/festival/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P061/briefing/detail/20261010/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://www.joshigakuin.ed.jp/exam/festival/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/10/12(月)</strong>
+                <span>時間未掲載</span>
+              </div>
+              <div>
+                <h3>文化祭(マグノリア祭)</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>-</span>
+                  <span class="reserve">詳細は学校公式サイトで追って案内予定</span>
+                  <span>予定</span>
+                </div>
+                
+              </div>
+              <div class="actions">
+                <a href="https://www.joshigakuin.ed.jp/exam/festival/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P061/briefing/detail/20261012/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://www.joshigakuin.ed.jp/exam/festival/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/11/10(火)</strong>
+                <span>時間未掲載</span>
+              </div>
+              <div>
+                <h3>第1回学校説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>-</span>
+                  <span class="reserve">詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+                  <span>予定</span>
+                </div>
+                
+              </div>
+              <div class="actions">
+                <a href="https://www.joshigakuin.ed.jp/exam/guidance/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P061/briefing/detail/20261110/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://www.joshigakuin.ed.jp/exam/guidance/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/11/12(木)</strong>
+                <span>時間未掲載</span>
+              </div>
+              <div>
+                <h3>第2回学校説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>-</span>
+                  <span class="reserve">詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+                  <span>予定</span>
+                </div>
+                
+              </div>
+              <div class="actions">
+                <a href="https://www.joshigakuin.ed.jp/exam/guidance/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P061/briefing/detail/20261112/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://www.joshigakuin.ed.jp/exam/guidance/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            
+            <article class="event">
+              <div class="datebox">
+                <strong>2026/11/14(土)</strong>
+                <span>時間未掲載</span>
+              </div>
+              <div>
+                <h3>第3回学校説明会</h3>
+                <div class="tags">
+                  <span>本校</span>
+                  <span>-</span>
+                  <span class="reserve">詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+                  <span>予定</span>
+                </div>
+                
+              </div>
+              <div class="actions">
+                <a href="https://www.joshigakuin.ed.jp/exam/guidance/" target="_blank" rel="noopener">予約</a>
+                <a href="https://www.study1.jp/kanto/school/B13P061/briefing/detail/20261114/" target="_blank" rel="noopener">詳細</a>
+                <a href="https://www.joshigakuin.ed.jp/exam/guidance/" target="_blank" rel="noopener">開始日根拠</a>
+              </div>
+            </article>
+            </div>
+    </section>
+  </main>
+  <footer>掲載情報は取得時点のものです。参加前に各校の公式サイトで最新情報を確認してください。</footer>
+  <div class="print-calendar">
+            <section class="print-month">
+              <div class="print-title">
+                <h1>女子学院中学校 2026年5月</h1>
+                <p>1件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">10</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">12</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">30</span>
+              
+            <div class="print-cal-event">
+              <strong>生徒による学校紹介</strong>
+              <span>10:00～</span>
+              <span>予約受付：2026年5月7日（木）11:00〜5月22日（金）11:00（miraicompass、申込先着）</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>女子学院中学校 2026年10月</h1>
+                <p>2件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">10</span>
+              
+            <div class="print-cal-event">
+              <strong>文化祭(マグノリア祭)</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">12</span>
+              
+            <div class="print-cal-event">
+              <strong>文化祭(マグノリア祭)</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">14</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">31</span>
+              
+            </div>
+            </div>
+            </section>
+            
+            <section class="print-month">
+              <div class="print-title">
+                <h1>女子学院中学校 2026年11月</h1>
+                <p>3件 / 取得基準日 2026-04-30</p>
+              </div>
+              <div class="print-grid"><div class="print-weekday">日</div><div class="print-weekday">月</div><div class="print-weekday">火</div><div class="print-weekday">水</div><div class="print-weekday">木</div><div class="print-weekday">金</div><div class="print-weekday">土</div>
+            <div class="print-day ">
+              <span class="print-day-number">1</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">2</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">3</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">4</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">5</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">6</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">7</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">8</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">9</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">10</span>
+              
+            <div class="print-cal-event">
+              <strong>第1回学校説明会</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">11</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">12</span>
+              
+            <div class="print-cal-event">
+              <strong>第2回学校説明会</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">13</span>
+              
+            </div>
+            
+            <div class="print-day has-events">
+              <span class="print-day-number">14</span>
+              
+            <div class="print-cal-event">
+              <strong>第3回学校説明会</strong>
+              <span>時間未掲載</span>
+              <span>詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付）</span>
+            </div>
+            
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">15</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">16</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">17</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">18</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">19</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">20</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">21</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">22</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">23</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">24</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">25</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">26</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">27</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">28</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">29</span>
+              
+            </div>
+            
+            <div class="print-day ">
+              <span class="print-day-number">30</span>
+              
+            </div>
+            <div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div><div class="print-day empty"></div></div>
+            </section>
+            </div>
+</body>
+</html>

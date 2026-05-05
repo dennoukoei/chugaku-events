@@ -16,6 +16,7 @@
 | 広尾学園中学校 | 〒106-0047 東京都港区南麻布5-1-14 | 東京メトロ日比谷線「広尾駅」4番出口すぐ、バス「日赤医療センター下・広尾学園前」下車すぐ | https://www.hiroogakuen.ed.jp/ | https://www.study1.jp/kanto/school/B13P111/briefing/ |
 | 東京女学館中学校 | 〒150-0012 東京都渋谷区広尾3-7-16 | 日比谷線「広尾駅」4番より徒歩12分、各線「渋谷駅」よりバス10分、各線「恵比寿駅」よりバス8分、バス「東京女学館前」下車 | https://www.tjk.jp/mh/ | https://www.study1.jp/kanto/school/B13P089/briefing/ |
 | 普連土学園中学校 | 〒108-0073 東京都港区三田4-14-16 | 都営浅草線「三田駅」より徒歩7分、JR「田町駅」より徒歩8分 | https://www.friends.ac.jp/ | https://www.study1.jp/kanto/school/B13P115/briefing/ |
+| 女子学院中学校 | 〒102-0082 東京都千代田区一番町22-10 | 東京メトロ丸ノ内線「麹町駅」5・6番出口より徒歩3分、東京メトロ半蔵門線「半蔵門駅」5番出口より徒歩6分、JR・東京メトロ南北線・都営新宿線「市ヶ谷駅」2・3番出口より徒歩8〜10分、JR・東京メトロ丸ノ内線・南北線「四ツ谷駅」麹町口より徒歩12〜15分 | https://www.joshigakuin.ed.jp/index.php | https://www.study1.jp/kanto/school/B13P061/briefing/ |
 
 ## イベント情報
 
@@ -194,3 +195,14 @@
 | 2026/12/7(月) | 10:00～ | 入試解説動画配信 | オンライン | - | 要予約イベントの予約受付開始日時は3週間前を目安にトップページへ掲示 | https://www.friends.ac.jp/examination/event.html |
 | 2026/12/19(土) | 9:00～12:00 | 入試相談会 | 本校 | ６年生 | 要予約イベントの予約受付開始日時は3週間前を目安にトップページへ掲示 | https://www.friends.ac.jp/examination/event.html |
 | 2027/2/13(土) | 9:00～12:00 | 学校体験日＆普連土生による個別質問コーナー（第３回 学校体験日） | 本校 | ５年生以下 | 要予約イベントの予約受付開始日時は3週間前を目安にトップページへ掲示 | https://www.friends.ac.jp/examination/event.html |
+
+### 女子学院中学校
+
+| 開催日 | 時間 | イベント名 | 場所 | 対象 | 予約開始日・記載 | 予約URL |
+|---|---|---|---|---|---|---|
+| 2026/5/30(土) | 10:00～ | 生徒による学校紹介 | 本校 | 小学4～６年生とその保護者 | 予約受付：2026年5月7日（木）11:00〜5月22日（金）11:00（miraicompass、申込先着） | https://www.joshigakuin.ed.jp/exam/inspection/ |
+| 2026/10/10(土) |  | 文化祭(マグノリア祭) | 本校 | - | 詳細は学校公式サイトで追って案内予定 | https://www.joshigakuin.ed.jp/exam/festival/ |
+| 2026/10/12(月) |  | 文化祭(マグノリア祭) | 本校 | - | 詳細は学校公式サイトで追って案内予定 | https://www.joshigakuin.ed.jp/exam/festival/ |
+| 2026/11/10(火) |  | 第1回学校説明会 | 本校 | - | 詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付） | https://www.joshigakuin.ed.jp/exam/guidance/ |
+| 2026/11/12(木) |  | 第2回学校説明会 | 本校 | - | 詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付） | https://www.joshigakuin.ed.jp/exam/guidance/ |
+| 2026/11/14(土) |  | 第3回学校説明会 | 本校 | - | 詳細は学校公式サイトで追って案内予定（昨年度は約1か月前にmiraicompassで先着受付） | https://www.joshigakuin.ed.jp/exam/guidance/ |
